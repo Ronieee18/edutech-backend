@@ -4,5 +4,5 @@ import { getallFeedbacks, postFeedback } from "../controllers/feedback.controlle
 const  feedbackRouter = Router();
 // feedbackRouter.use(verifyToken);
 feedbackRouter.get('/',getallFeedbacks);
-feedbackRouter.post(verifyToken,'/',postFeedback);
+feedbackRouter.post('/',verifyToken,postFeedback);
 export default feedbackRouter
